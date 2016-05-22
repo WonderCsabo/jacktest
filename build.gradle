@@ -1,0 +1,30 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.2.0-alpha1'
+    }
+}
+
+repositories {
+    jcenter()
+}
+
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "24.0.0 rc4"
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 23
+
+        jackOptions {
+            enabled true
+
+//            additionalParameters = [ "jack.reporter.file" : "-"]
+        }
+    }
+}
